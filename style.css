@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --palette-color-1: #8a2be2;
+    --palette-color-2: #eee0fe;
+    --palette-color-3: #490383;
+    --palette-color-4: #c68df4;
+}
+
+body {
+    background-color: #1c1c2d;
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    text-align: justify;
+}
+
+/* Menu */
+header {
+    width: 100wh;
+
+}
+
+a {
+    text-decoration: none;
+    color: var(--palette-color-2);
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+
+}
+
+nav a {
+    background-color: var(--palette-color-1);
+    margin: 0 2rem 0 2rem;
+    padding: 1rem;
+    text-align: center;
+    align-content: center;
+    border-radius: 1rem;
+
+}
+
+nav a:hover {
+    color: white;
+    background-color: var(--palette-color-3);
+    transition: 0.5s;
+}
+
+/* Section */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+}
+
+section {
+    flex: 1;
+}
+
+#index {
+    margin: 0 500px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+
+}
+
+#sobremim {
+    margin: 5rem 10rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    width: auto;
+}
+
+#formacao {
+    margin: 5rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+#contato {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+    font-family: "Playfair Display", serif;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.2rem;
+    text-align: center;
+
+}
+
+hr {
+    width: 50vw;
+}
+
+.resumo {
+    text-align: justify;
+}
+
+.destaque {
+    color: var(--palette-color-4);
+    font-weight: 600;
+
+}
+
+#formacao ul,
+li {
+    padding: 1rem;
+    text-align: justify;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+footer a:hover {
+    transition: 0.5s;
+    color: var(--palette-color-1);
+}
+
+footer a {
+    margin: 0 2rem 0 2rem;
+    padding: 1rem;
+    text-align: center;
+    align-content: center;
+    border-radius: 1rem;
+}
+
+i {
+    font-size: 2rem;
+}
