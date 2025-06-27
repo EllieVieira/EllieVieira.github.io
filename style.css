@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:wght@400;600&display=swap');
+/* link das fontes usadas */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+/* para resetar a pagina */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* cores usadas no site */
 :root {
     --palette-color-1: #8a2be2;
     --palette-color-2: #eee0fe;
@@ -27,7 +29,6 @@ body {
 /* Menu */
 header {
     width: 100wh;
-
 }
 
 a {
@@ -77,10 +78,6 @@ section {
     text-align: center;
 }
 
-.text-index {
-    flex-direction: column;
-}
-
 #index img {
     width: 400px;
     height: 400px;
@@ -126,6 +123,7 @@ h2 {
 
 hr {
     width: 50vw;
+    margin: 1rem auto;
 }
 
 .resumo {
@@ -183,9 +181,8 @@ textarea {
     gap: 2rem;
     justify-content: center;
     align-items: center;
-    max-width: 1100px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 2rem 15rem;
 }
 
 .site-image {
@@ -232,10 +229,11 @@ textarea {
     border-radius: 0.2rem;
 }
 
-#portfolio .fa-square-github{
-font-size: 2rem;
+#portfolio .fa-square-github {
+    font-size: 2rem;
 }
-/* animação */
+
+/* Animação */
 
 .bolha {
     position: fixed;
@@ -337,4 +335,135 @@ footer a {
 
 footer i {
     font-size: 2rem;
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 1080px) {
+    #portfolio {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+        margin: 0;
+    }
+
+    .site-image,
+    #portfolio img {
+        width: 90%;
+        max-width: 500px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    #index {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 2rem auto;
+        gap: 1rem;
+        text-align: center;
+        max-width: 90%;
+    }
+
+    #index img {
+        width: 200px;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        padding: 0.7rem 1.2rem;
+        margin: 0.3rem;
+        font-size: 0.95rem;
+        white-space: nowrap;
+    }
+
+    #sobremim,
+    #formacao {
+        margin: 2rem;
+    }
+
+    input,
+    textarea {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        width: 90%;
+        text-align: center;
+        font-size: 0.9rem;
+        padding: 0.8rem;
+        border-radius: 0.8rem;
+    }
+
+    .site-image,
+    #portfolio img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    .site-image:hover,
+    #portfolio img:hover {
+        transform: scale(1.05);
+    }
+
+    .site-image,
+    #portfolio img {
+        transition: transform 0.3s ease;
+    }
+
+    #index {
+        margin: 1rem;
+        flex-direction: column;
+    }
+
+    #index img {
+        width: 90%;
+        height: auto;
+    }
+
+    footer a {
+        padding: 0.7rem;
+        margin: 0.3rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    nav a {
+        font-size: 0.85rem;
+        padding: 0.6rem 0.8rem;
+    }
+
+    .site-image,
+    #portfolio img {
+        max-width: 270px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    .bolha {
+        display: none;
+    }
 }
