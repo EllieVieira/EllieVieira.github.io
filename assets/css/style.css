@@ -37,25 +37,43 @@ a {
     cursor: pointer;
 }
 
-nav {
+nav ul{
     display: flex;
     justify-content: center;
     padding: 1rem;
 }
 
-nav a {
+nav li{
+    list-style: none;
+}
+
+nav li a {
     background-color: var(--palette-color-1);
     margin: 0 2rem 0 2rem;
     padding: 1rem;
     text-align: center;
     align-content: center;
     border-radius: 1rem;
+    list-style: none;
 }
 
 nav a:hover {
     color: white;
     background-color: var(--palette-color-3);
     transition: 0.5s;
+}
+
+/* Menu mobile */
+.mobile-menu div{
+width: 32px;
+height: 2px;
+background: #ffffff;
+margin: 8px;
+}
+
+.mobile-menu{
+    cursor: pointer;
+    display: none;
 }
 
 /* Section */
@@ -373,6 +391,10 @@ footer i {
 }
 
 @media screen and (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+    
     nav {
         flex-wrap: wrap;
         justify-content: center;
@@ -385,6 +407,33 @@ footer i {
         font-size: 0.95rem;
         white-space: nowrap;
     }
+
+    .nav-list{
+position:absolute;
+/* top: 8vh; */
+left: 0;
+width: 50vw;
+height: 92vh;
+background: var(--palette-color-4);
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+transform: translateX(100%);
+
+}
+
+.nav-list li{
+margin-left: 0;
+/* opacity: 0; */
+}
+
+.nav-list.active{
+    transform: translateX(0);
+}
+
+.mobile-menu{
+    display: block;
+}
 
     #sobremim,
     #formacao {
