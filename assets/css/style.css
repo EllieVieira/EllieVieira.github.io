@@ -12,7 +12,7 @@
 /* cores usadas no site */
 :root,
 :root[data-theme='dark'] {
-    --palette-color-text: #1c1c2d;
+    --palette-color-text: #291c2d;
     --palette-color-text-light: #eee0fe;
     --palette-color-highlight: #8a2be2;
     --palette-color-primary: #490383;

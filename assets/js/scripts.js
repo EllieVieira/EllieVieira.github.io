@@ -45,15 +45,33 @@ mobileNavbar.init();
 
 // Modo Claro/Escuro
 const toggleTheme = document.getElementById("toggleTheme");
-const rootHtml = document.documentElement
+const rootHtml = document.documentElement;
+
+// 🔹 Aplica tema salvo ao carregar a página
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme) {
+    rootHtml.setAttribute("data-theme", savedTheme);
+
+    if (savedTheme === "dark") {
+        toggleTheme.classList.add("bi-moon-stars");
+        toggleTheme.classList.remove("bi-sun");
+    }
+}
+
+// 🔹 Função de troca
 function changeTheme() {
-    const currentTheme = rootHtml.getAttribute("data-theme")
+    const currentTheme = rootHtml.getAttribute("data-theme");
 
-    // usando operador ternário
-    currentTheme === "dark" ? rootHtml.setAttribute("data-theme", "light") : rootHtml.setAttribute("data-theme", "dark")
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
 
-    toggleTheme.classList.toggle("bi-sun")
-    toggleTheme.classList.toggle("bi-moon-stars")
+    rootHtml.setAttribute("data-theme", newTheme);
+
+    // salva no navegador
+    localStorage.setItem("theme", newTheme);
+
+    toggleTheme.classList.toggle("bi-sun");
+    toggleTheme.classList.toggle("bi-moon-stars");
 }
 
 toggleTheme.addEventListener("click", changeTheme);
